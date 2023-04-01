@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Classification</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/predict.css') }}"
+    />
+  </head>
+
+  <body>
+    <div id="container">
+      <h1><u>Classification</u></h1>
+      <p>The calssified flower is <i>{{data}}!</i></p>
+      {% if data == "Iris setosa": %}
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg/640px-Kosaciec_szczecinkowaty_Iris_setosa.jpg"
+        alt="Iris Setosa"
+      />
+      {% endif %} {% if data == "Iris versicolor": %}
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Blue_Flag%2C_Ottawa.jpg/640px-Blue_Flag%2C_Ottawa.jpg"
+        alt="Iris versicolor"
+      />
+      {% endif %} {% if data == "Iris virginica": %}
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Iris_virginica.jpg/640px-Iris_virginica.jpg"
+        alt="Iris virginica"
+      />
+      {% endif %}
+    </div>
+  </body>
+</html>

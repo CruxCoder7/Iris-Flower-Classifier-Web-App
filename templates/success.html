@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/success.css') }}"
+    />
+    <title>Iris Flower Classifier</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1><u>Iris Flower Classifier</u></h1>
+      <form action="/classify" method="post">
+        <label for="sepal-length" style="margin-left: -185px"
+          >Sepal Length:</label
+        >
+        <input
+          type="text"
+          id="sepal-length"
+          name="sepal-length"
+          placeholder="Enter sepal length..."
+          required
+        />
+        <label for="sepal-width" style="margin-left: -190px"
+          >Sepal Width:</label
+        >
+        <input
+          type="text"
+          id="sepal-width"
+          name="sepal-width"
+          placeholder="Enter sepal width..."
+          required
+        />
+        <label for="petal-length" style="margin-left: -185px"
+          >Petal Length:</label
+        >
+        <input
+          type="text"
+          id="petal-length"
+          name="petal-length"
+          placeholder="Enter petal length..."
+          required
+        />
+        <label for="petal-width" style="margin-left: -195px"
+          >Petal Width:</label
+        >
+        <input
+          type="text"
+          id="petal-width"
+          name="petal-width"
+          placeholder="Enter petal width..."
+          required
+        />
+        <input type="submit" value="Classify" />
+      </form>
+    </div>
+  </body>
+</html>
